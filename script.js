@@ -3,10 +3,11 @@ function extractDetails() {
   const output = document.getElementById("output");
   const error = document.getElementById("error");
   const refreshBtn = document.getElementById("refreshBtn");
+  const detailsBox = document.getElementById("detailsBox");
 
   output.innerHTML = "";
   error.innerHTML = "";
-  refreshBtn.style.display = "none";
+  detailsBox.style.display = "none";
 
   let year, dayOfYear, gender;
 
@@ -38,12 +39,13 @@ function extractDetails() {
     <p><strong>Gender:</strong> ${gender}</p>
   `;
 
-  refreshBtn.style.display = "inline-block";
+  detailsBox.style.display = "block";
 }
 
 function refreshForm() {
   document.getElementById("nicInput").value = "";
   document.getElementById("output").innerHTML = "";
   document.getElementById("error").innerHTML = "";
-  document.getElementById("refreshBtn").style.display = "none";
+  document.getElementById("detailsBox").style.display = "none";
+  document.getElementById("nicInput").focus();
 }

@@ -9,17 +9,18 @@
 <body>
   <div class="container">
     <h1>NIC Birthdate & Gender Extractor</h1>
-    <input type="text" id="nicInput" placeholder="Enter NIC (e.g. 200012345678 or 901234567V)" />
+    <input type="text" id="nicInput" placeholder="Enter NIC (10 or 12 digits)" />
     <button onclick="extractDetails()">Extract</button>
-
-    <div class="output" id="output"></div>
     <div class="error" id="error"></div>
-    <button id="refreshBtn" onclick="refreshForm()" style="display:none; margin-top: 15px;">
-  Refresh
-</button>
+
+    <!-- Hidden Result Section -->
+    <div class="details-box" id="detailsBox">
+      <h2>Details</h2>
+      <div class="output" id="output"></div>
+      <button id="refreshBtn" onclick="refreshForm()">Refresh</button>
+    </div>
   </div>
 
-  
   <script src="script.js"></script>
 </body>
 </html>
